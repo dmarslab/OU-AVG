@@ -1,0 +1,22 @@
+{
+  "repository": "https://github.com/agilexrobotics/ugv_gazebo_sim",
+  "revision": "27633a956c845903ee630538afeb17fe70afdd84",
+  "source_sha256": {
+    "package.xml": "a3cc2a8941bbf01914b804c514cfaea7f6c0d007f8e2d0b08a68ebc2d253c8a8",
+    "urdf/mini.xacro": "6e1f4cbd255bfa94f59be8d8c23a7abbe78430a91239ec5ab34cbd3fa6e7d222",
+    "urdf/scout_mini_wheel_1.xacro": "b0f0a68637abfa2d095336dfb8a7327a8b0ba3958c0076fd3462448c22b4a52a",
+    "urdf/scout_mini_wheel_2.xacro": "4ccb13e80ec64397458a069f5ef9279ffcbdf8088fdb7e69347b3d10d0a9537d",
+    "urdf/scout_mini_wheel_3.xacro": "d223eefcc1acb4cd802819433a8c33e7af063a28fc60545f420ce3f683c25748",
+    "urdf/scout_mini_wheel_4.xacro": "699255cff121fed79632c324e70cd8e7cb4dec61a7a2f852c0b01c3800e1e96a",
+    "meshes/scout_mini_base_link2.dae": "c91ba00c5822e49443202ef9cc9b512e210cca0e1c75ce91db5a8a26821dc6ad",
+    "meshes/wheel.dae": "71d7c2c16c03782d127b84fcddba7393f057566885a20c1257dcfbbf2e65439c"
+  },
+  "converted_parts": "mini.xacro chassis and four wheels; no example sensor payload",
+  "modifications": [
+    "Collada converted to binary STL grouped by diffuse color",
+    "Rounded 1.57 rad rotations made exact pi/2",
+    "MuJoCo velocity actuators, contacts, ground and IMU added",
+    "Rigid wheel mounts as in upstream; no suspension joints",
+    "Motor limits and contact parameters are simulation estimates"
+  ]
+}
