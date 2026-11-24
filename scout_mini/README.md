@@ -15,7 +15,6 @@ scout_mini/
   model/upstream/      # source descriptions, BSD notice, revision, checksums
   python/run.py        # automatic macOS / Windows / Linux launcher
   python/simulation.py # simple velocity command and viewer
-  python/convert_gazebo.py # optional mesh conversion and MJCF generator
   requirements.txt
 ```
 
@@ -101,16 +100,8 @@ and visually inspected for mesh orientation and alignment. The interactive viewe
 and execution on Windows were not tested directly; platform selection was checked
 using mocked operating-system values.
 
-To regenerate from a local checkout (conversion dependencies are optional):
-
-```bash
-git clone https://github.com/agilexrobotics/ugv_gazebo_sim.git
-python -m pip install -r scout_mini/requirements-conversion.txt
-python scout_mini/python/convert_gazebo.py /path/to/ugv_gazebo_sim
-```
-
-The generator writes `model/scout_mini.xml`, converted mesh assets, and provenance.
-It uses the primitive model as a template for the ground, contacts, and sensors.
 The included conversion comes from commit
 `27633a956c845903ee630538afeb17fe70afdd84`. Original Xacro/package files, mesh-source
 SHA-256 checksums, conversion notes, and the BSD notice are in `model/upstream/`.
+The converted assets are bundled for simulation; a conversion script is not
+included in this checkout.
